@@ -1,6 +1,5 @@
 package com.traxon.dogbackend.models;
 
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +9,7 @@ import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor @AllArgsConstructor @Getter @Setter
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "name"))
 public class Dog {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
